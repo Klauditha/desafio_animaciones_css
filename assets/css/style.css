@@ -1,0 +1,7 @@
+.container{
+    grid-template-areas: 
+        "header"
+        "aside"
+        "main"
+        "footer";
+}
