@@ -1,7 +1,93 @@
-.container{
-    grid-template-areas: 
-        "header"
-        "aside"
-        "main"
-        "footer";
+:root {
+    --DarkPrimaryColor: #D32F2F;
+    --LightPrimaryColor: #FFCDD2;
+    --PrimaryColor:#F44336;
+    --TextColor:#ffffff;
+    --AcentColor:#FF5252;
+    --PrimaryText: #212121;
+    --DividerColor:#BDBDBD;
+  }
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    /*height: 100vh;*/
+ }
+
+.container {
+    display: grid;
+    grid-template-areas:
+      'navbar'
+      'aside'
+      'main'
+      'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr 10fr 3fr;
+}
+  
+.navbar{
+    font-family: 'Tilt Prism', cursive;
+    grid-area: navbar;
+    background-color:var(--DarkPrimaryColor);
+    color:var(--TextColor);
+    display:flex;
+    font-size: large;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid var(--LightPrimaryColor);
+}
+
+.navbar_menu_lista{
+    display: none;
+}
+.aside{
+    grid-area: aside;
+}
+.main{
+    grid-area: main;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: var(--LightPrimaryColor);
+    border: 1px solid var(--DarkPrimaryColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    color: var(--DarkPrimaryColor);
+
+}
+/*MODO TABLET - OPCIONAL*/
+@media (min-width: 576px) and (max-width: 991px) {
+    .container {
+        display: grid;
+        grid-template-areas:
+          'navbar navbar'
+          'aside main'
+          'aside pagination'
+          'footer footer';
+        grid-template-columns: 0.5fr 3fr;
+        grid-template-rows: 0.5fr 6fr 0.3fr 0.5fr;
+      }
+}
+
+/*MODO ESCRITORIO*/
+@media (min-width: 992px) {
+    .container {
+      display: grid;
+      grid-template-areas:
+        'navbar aside'
+        'navbar main'
+        'footer main';
+      grid-template-columns: 1fr 6fr;
+      grid-template-rows: 1fr 5.5fr 1fr;
+    }
+
+    .navbar_menu_lista{
+        display: flex;
+    }
 }
