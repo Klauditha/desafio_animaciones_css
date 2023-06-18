@@ -22,7 +22,7 @@
       'main'
       'footer';
     grid-template-columns: 1fr;
-    grid-template-rows: 2fr 2fr 10fr 3fr;
+    grid-template-rows: 3% 3% 10fr 3%;
   }
   
   .navbar {
@@ -109,6 +109,48 @@
     grid-area: main;
   }
   
+  
+.item {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  /*width: 350px;*/
+  height: 300px;
+  overflow-y: auto;
+  border-radius: 20px;
+}
+
+.item_image img {
+  width: 250px;
+  border-radius: 20px;
+}
+
+.item_text {
+  color: #512da8;
+  margin: 10px;
+}
+
+.item_button button {
+  background-color: #ff4081;
+  color: #fff;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  border: 0;
+}
+
+.car_button button:hover {
+  background-color: #d1c4e9;
+  color: #000000;
+}
+
+.car_button button:focus {
+  background-color: #757575;
+  color: #fff;
+}
   @keyframes myAnim {
     0% {
       background-position: center top;
@@ -169,9 +211,26 @@
       grid-template-rows: 1fr 5.5fr 1fr;
     }
   
+    .main {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-content: center;
+      align-items: stretch;
+      row-gap: 20px;
+    }
+  
+    .item {
+      width: 250px;
+      height: 280px;
+    }
+  
+    .item_image img {
+      width: 200px;
+    }
     .aside {
       display: none;
     }
+
 
     .navbar_menu_icono {
       display: none;
