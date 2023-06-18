@@ -107,7 +107,7 @@ body {
 }
 .main {
   grid-area: main;
-  background-image: url('./assets/img/02_santiago.jpg');
+  background-image: url('../img/02_santiago.jpg');
   background-repeat: no-repeat, repeat;
   background-size: cover;
   animation: myAnim 30s ease 0s 1 normal forwards;
@@ -179,7 +179,7 @@ body {
 
   .main {
     grid-area: main;
-    background-image: url('./assets/img/01_santiago.jpg');
+    background-image: url('../img/01_santiago.jpg');
     background-repeat: no-repeat, repeat;
     background-size: cover;
     animation: myAnim 30s ease 0s 1 normal forwards;
