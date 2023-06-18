@@ -21,7 +21,7 @@ body {
       'main'
       'footer';
     grid-template-columns: 1fr;
-    grid-template-rows: 3% 3% 10fr 3%;
+    grid-template-rows: 4% 4% 10fr 4%;
   }
   
   .navbar {
