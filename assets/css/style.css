@@ -22,7 +22,7 @@ body {
     'main'
     'footer';
   grid-template-columns: 1fr;
-  grid-template-rows: 2fr 1fr 14fr 3fr;
+  grid-template-rows: 2fr 2fr 10fr 3fr;
 }
 
 .navbar {
@@ -41,13 +41,69 @@ body {
 .navbar_logo img {
   height: 50px;
   color: var(--TextColor);
+  animation: Tambalearse 3s ease 0s 1 alternate backwards;
 }
-.navbar_menu_lista {
+
+@keyframes Tambalearse {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
+}
+.navbar .navbar_menu_lista {
   display: none;
 }
 .aside {
   grid-area: aside;
-  background-color: var(--DividerColor);
+  background-color: var(--LightPrimaryColor);
+}
+
+.aside .navbar_menu_lista {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: start;
+  align-content: center;
+  align-items: start;
+  justify-items: center;
+  gap:5px
+}
+
+.aside .navbar_menu_lista_item a {
+  text-decoration: none;
+  color: var(--DarkPrimaryColor);
+  font-weight: bolder;
+}
+
+.aside .navbar_menu_lista_item a:hover {
+  color: var(--PrimaryText);
+  text-shadow: 2px 5px 9px #f9f9f9, 5px 5px 10px #d54848;
+}
+.aside .navbar_menu_lista_item a:focus {
+  color: var(--PrimaryText);
+  text-shadow: 2px 5px 9px #f9f9f9, 5px 5px 10px #d54848;
 }
 .main {
   grid-area: main;
@@ -55,19 +111,18 @@ body {
   background-repeat: no-repeat, repeat;
   background-size: cover;
   animation: myAnim 30s ease 0s 1 normal forwards;
-
 }
 
 @keyframes myAnim {
-	0% {
-		background-position: center top;
-		background-size: 100%;
-	}
+  0% {
+    background-position: center top;
+    background-size: 100%;
+  }
 
-	100% {
-		background-position: center top;
-		background-size: 150%;
-	}
+  100% {
+    background-position: center top;
+    background-size: 150%;
+  }
 }
 .footer {
   grid-area: footer;
@@ -111,11 +166,23 @@ body {
   .container {
     display: grid;
     grid-template-areas:
-      'navbar aside'
+      'navbar main'
       'navbar main'
       'footer footer';
     grid-template-columns: 2fr 8fr;
     grid-template-rows: 1fr 5.5fr 1fr;
+  }
+
+  .aside {
+    display: none;
+  }
+
+  .main {
+    grid-area: main;
+    background-image: url('/assets/img/01_santiago.jpg');
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    animation: myAnim 30s ease 0s 1 normal forwards;
   }
   .navbar_menu_icono {
     display: none;
@@ -130,11 +197,14 @@ body {
     border: 1px solid var(--LightPrimaryColor);
     align-items: center;
   }
-  .navbar_nombre{
+  .navbar_nombre {
     text-align: center;
   }
   .navbar_logo img {
     height: 80px;
+  }
+  .navbar .navbar_menu_lista {
+    display: flex;
   }
   .navbar_menu_lista {
     padding-top: 50px;
@@ -153,12 +223,10 @@ body {
 
   .navbar_menu_lista_item a:hover {
     color: var(--TextColor);
-    text-shadow: 2px 5px 9px #F9F9F9, 5px 5px 10px #D54848;
-
+    text-shadow: 2px 5px 9px #f9f9f9, 5px 5px 10px #d54848;
   }
   .navbar_menu_lista_item a:focus {
     color: var(--TextColor);
-    text-shadow: 2px 5px 9px #F9F9F9, 5px 5px 10px #D54848;
-
+    text-shadow: 2px 5px 9px #f9f9f9, 5px 5px 10px #d54848;
   }
 }
