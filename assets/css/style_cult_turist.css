@@ -200,7 +200,7 @@ body {
       'navbar main'
       'footer footer';
     grid-template-columns: 2fr 8fr;
-    grid-template-rows: 1fr 5.5fr 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
   }
 
   .main {
@@ -270,7 +270,7 @@ body {
     color: var(--TextColor);
     text-shadow: 2px 5px 9px #f9f9f9, 5px 5px 10px #d54848;
   }
-  
+
   .navbar_menu_lista_item a:focus {
     color: var(--TextColor);
     text-shadow: 2px 5px 9px #f9f9f9, 5px 5px 10px #d54848;
