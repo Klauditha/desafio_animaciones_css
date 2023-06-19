@@ -129,7 +129,7 @@ body {
 .item_image img {
   width: 250px;
   border-radius: 20px;
-  filter: grayscale(0.7)
+  filter: grayscale(0.8)
 }
 
 .item_image img:hover,img:focus {
@@ -226,15 +226,14 @@ body {
 }
 
 /*MODO ESCRITORIO*/
-@media (min-width: 992px) {
+@media (min-width: 992px) and  (max-width: 1336px)  {
   .container {
     display: grid;
     grid-template-areas:
       'navbar main'
-      'navbar main'
       'footer footer';
-    grid-template-columns: 2fr 8fr;
-    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-columns:1.5fr 7fr;
+    grid-template-rows:5.5fr 0.5fr;
   }
 
   .main {
@@ -242,16 +241,15 @@ body {
     grid-template-columns: repeat(4, 1fr);
     align-content: center;
     align-items: stretch;
-    row-gap: 20px;
   }
 
   .item {
-    width: 300px;
-    height: 280px;
+    width: 250px;
+    height: 220px;
   }
 
   .item_image img {
-    width: 220px;
+    width: 150px;
   }
   .aside {
     display: none;
@@ -284,12 +282,12 @@ body {
   }
 
   .navbar_menu_lista {
-    padding-top: 50px;
+    padding-top: 10px;
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
     flex-direction: column;
     font-size: 18px;
-    gap: 20px;
+    gap: 10px;
     text-align: center;
   }
 
@@ -308,4 +306,48 @@ body {
     color: var(--TextColor);
     text-shadow: 2px 5px 9px #f9f9f9, 5px 5px 10px #d54848;
   }
+}
+
+/*MODO ESCRITORIO GRANDE*/
+@media (min-width: 1337px) {
+  .container {
+    display: grid;
+    grid-template-areas:
+      'navbar main'
+      'footer footer';
+    grid-template-columns: 1.5fr 8fr;
+    grid-template-rows: 10fr 2fr;
+  }
+  
+  .item {
+    width: 350px;
+    height: 350px;
+    border: gray solid 1px;
+  }
+
+  .item_image img {
+    width: 200px;
+  }
+
+    .main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center;
+    align-items: stretch;
+  }
+  
+    .navbar_menu_icono {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    font-size: large;
+    font-size: 25px;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid var(--LightPrimaryColor);
+    align-items: center;
+  }
+
 }
