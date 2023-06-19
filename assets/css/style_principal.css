@@ -1,30 +1,30 @@
 :root {
-    --DarkPrimaryColor: #d32f2f;
-    --LightPrimaryColor: #ffcdd2;
-    --PrimaryColor: #f44336;
-    --TextColor: #ffffff;
-    --AcentColor: #ff5252;
-    --PrimaryText: #212121;
-    --DividerColor: #bdbdbd;
+  --DarkPrimaryColor: #d32f2f;
+  --LightPrimaryColor: #ffcdd2;
+  --PrimaryColor: #f44336;
+  --TextColor: #ffffff;
+  --AcentColor: #ff5252;
+  --PrimaryText: #212121;
+  --DividerColor: #bdbdbd;
 }
-  
+
 body {
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
-    display: grid;
-    grid-template-areas:
-      'navbar'
-      'aside'
-      'main'
-      'footer';
-    grid-template-columns: 1fr;
-    grid-template-rows: 4% 4% 10fr 4%;
+  display: grid;
+  grid-template-areas:
+    'navbar'
+    'aside'
+    'main'
+    'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 2fr 10fr 3fr;
 }
-  
+
 .navbar {
   font-family: 'Tilt Prism', cursive;
   grid-area: navbar;
@@ -44,33 +44,33 @@ body {
   color: var(--TextColor);
   animation: Tambalearse 3s ease 0s 1 alternate backwards;
 }
-  
+
 @keyframes Tambalearse {
-    0%,
-    100% {
-        transform: translateX(0%);
-        transform-origin: 50% 50%;
-    }
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
 
-    15% {
-        transform: translateX(-30px) rotate(-6deg);
-    }
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
 
-    30% {
-        transform: translateX(15px) rotate(6deg);
-    }
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
 
-    45% {
-        transform: translateX(-15px) rotate(-3.6deg);
-    }
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
 
-    60% {
-        transform: translateX(9px) rotate(2.4deg);
-    }
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
 
-    75% {
-        transform: translateX(-6px) rotate(-1.2deg);
-    }
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
 }
 
 .navbar .navbar_menu_lista {
@@ -81,7 +81,7 @@ body {
   grid-area: aside;
   background-color: var(--LightPrimaryColor);
 }
-  
+
 .aside .navbar_menu_lista {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -112,47 +112,10 @@ body {
 
 .main {
   grid-area: main;
-}
-  
-.item {
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  height: 300px;
-  overflow-y: auto;
-  border-radius: 20px;
-}
-
-.item_image img {
-  width: 250px;
-  border-radius: 20px;
-}
-
-.item_text {
-  color: #512da8;
-  margin: 10px;
-}
-
-.item_button button {
-  background-color: #ff4081;
-  color: #fff;
-  width: 100px;
-  height: 30px;
-  border-radius: 5px;
-  border: 0;
-}
-
-.car_button button:hover {
-  background-color: #d1c4e9;
-  color: #000000;
-}
-
-.car_button button:focus {
-  background-color: #757575;
-  color: #fff;
+  background-image: url('../img/02_santiago.jpg');
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  animation: myAnim 30s ease 0s 1 normal forwards;
 }
 
 @keyframes myAnim {
@@ -180,13 +143,13 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-  
+
 .footer_socialmedia {
   display: flex;
   gap: 20px;
   font-size: 20px;
 }
-  
+
 .footer_text {
   text-align: center;
 }
@@ -200,28 +163,19 @@ body {
       'navbar main'
       'footer footer';
     grid-template-columns: 2fr 8fr;
-    grid-template-rows: 1fr 5.5fr 1fr;
-  }
-
-  .main {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-content: center;
-    align-items: stretch;
-    row-gap: 20px;
-  }
-
-  .item {
-    width: 250px;
-    height: 280px;
-  }
-
-  .item_image img {
-    width: 200px;
+    grid-template-rows: 0.5fr 8.5fr 1fr;
   }
 
   .aside {
     display: none;
+  }
+
+  .main {
+    grid-area: main;
+    background-image: url('../img/01_santiago.jpg');
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    animation: myAnim 30s ease 0s 1 normal forwards;
   }
 
   .navbar_menu_icono {
@@ -249,7 +203,7 @@ body {
   .navbar .navbar_menu_lista {
     display: flex;
   }
-  
+
   .navbar_menu_lista {
     padding-top: 50px;
     display: flex;
@@ -276,4 +230,3 @@ body {
     text-shadow: 2px 5px 9px #f9f9f9, 5px 5px 10px #d54848;
   }
 }
-  
