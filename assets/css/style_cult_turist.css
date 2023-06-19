@@ -129,6 +129,40 @@ body {
 .item_image img {
   width: 250px;
   border-radius: 20px;
+  filter: grayscale(0.7)
+}
+
+.item_image img:hover,img:focus {
+  filter: grayscale(0);
+  animation: legumbreEffect 5s ease 0s 1 normal forwards;
+}
+
+@keyframes legumbreEffect {
+	0% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+		transform-origin: center center;
+	}
+
+	10% {
+		animation-timing-function: ease-in;
+		transform: scale(0.91);
+	}
+
+	17% {
+		animation-timing-function: ease-out;
+		transform: scale(0.98);
+	}
+
+	33% {
+		animation-timing-function: ease-in;
+		transform: scale(0.87);
+	}
+
+	45% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
 }
 
 .item_text {
@@ -145,12 +179,12 @@ body {
   border: 0;
 }
 
-.car_button button:hover {
+.item_button button:hover {
   background-color: #d1c4e9;
   color: #000000;
 }
 
-.car_button button:focus {
+.item_button button:focus {
   background-color: #757575;
   color: #fff;
 }
