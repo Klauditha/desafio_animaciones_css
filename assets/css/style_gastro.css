@@ -200,7 +200,7 @@ body {
       'navbar main'
       'footer footer';
     grid-template-columns: 2fr 8fr;
-    grid-template-rows: 1fr 5.5fr 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
   }
 
   .main {
@@ -217,7 +217,7 @@ body {
   }
 
   .item_image img {
-    width: 250px;
+    width: 220px;
   }
   .aside {
     display: none;

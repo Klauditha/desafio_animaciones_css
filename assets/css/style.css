@@ -38,6 +38,7 @@ body {
   border: 1px solid var(--LightPrimaryColor);
   align-items: center;
 }
+
 .navbar_logo img {
   height: 50px;
   color: var(--TextColor);
@@ -71,9 +72,11 @@ body {
 		transform: translateX(-6px) rotate(-1.2deg);
 	}
 }
+
 .navbar .navbar_menu_lista {
   display: none;
 }
+
 .aside {
   grid-area: aside;
   background-color: var(--LightPrimaryColor);
@@ -101,10 +104,12 @@ body {
   color: var(--PrimaryText);
   text-shadow: 2px 5px 9px #f9f9f9, 5px 5px 10px #d54848;
 }
+
 .aside .navbar_menu_lista_item a:focus {
   color: var(--PrimaryText);
   text-shadow: 2px 5px 9px #f9f9f9, 5px 5px 10px #d54848;
 }
+
 .main {
   grid-area: main;
   background-image: url('../img/02_santiago.jpg');
@@ -124,6 +129,7 @@ body {
     background-size: 150%;
   }
 }
+
 .footer {
   grid-area: footer;
   background-color: var(--LightPrimaryColor);
@@ -147,19 +153,6 @@ body {
 .footer_text {
   text-align: center;
 }
-/*MODO TABLET - OPCIONAL*/
-@media (min-width: 576px) and (max-width: 991px) {
-  .container {
-    display: grid;
-    grid-template-areas:
-      'navbar navbar'
-      'aside main'
-      'aside pagination'
-      'footer footer';
-    grid-template-columns: 0.5fr 3fr;
-    grid-template-rows: 0.5fr 6fr 0.3fr 0.5fr;
-  }
-}
 
 /*MODO ESCRITORIO*/
 @media (min-width: 992px) {
@@ -170,7 +163,7 @@ body {
       'navbar main'
       'footer footer';
     grid-template-columns: 2fr 8fr;
-    grid-template-rows: 1fr 5.5fr 1fr;
+    grid-template-rows: 0.5fr 8.5fr 1fr;
   }
 
   .aside {
@@ -184,6 +177,7 @@ body {
     background-size: cover;
     animation: myAnim 30s ease 0s 1 normal forwards;
   }
+
   .navbar_menu_icono {
     display: none;
   }
@@ -197,15 +191,19 @@ body {
     border: 1px solid var(--LightPrimaryColor);
     align-items: center;
   }
+
   .navbar_nombre {
     text-align: center;
   }
+
   .navbar_logo img {
     height: 80px;
   }
+
   .navbar .navbar_menu_lista {
     display: flex;
   }
+
   .navbar_menu_lista {
     padding-top: 50px;
     display: flex;
@@ -215,6 +213,7 @@ body {
     gap: 20px;
     text-align: center;
   }
+
   .navbar_menu_lista_item a {
     text-decoration: none;
     color: var(--LightPrimaryColor);
@@ -225,6 +224,7 @@ body {
     color: var(--TextColor);
     text-shadow: 2px 5px 9px #f9f9f9, 5px 5px 10px #d54848;
   }
+  
   .navbar_menu_lista_item a:focus {
     color: var(--TextColor);
     text-shadow: 2px 5px 9px #f9f9f9, 5px 5px 10px #d54848;
