@@ -125,8 +125,7 @@ body {
   height: 250px;
   overflow-y: auto;
   border-radius: 20px;
-  margin-left: 20px;
-  border: 5px groove var(--LightPrimaryColor);
+ 
 }
 
 .item_image img {
@@ -251,6 +250,8 @@ body {
   .item {
     width: 280px;
     height: 280px;
+    margin-left: 20px;
+    border: 5px groove var(--LightPrimaryColor);
   }
 
   .item_image img {
