@@ -146,8 +146,8 @@ body {
 
 .footer_socialmedia {
   display: flex;
-  gap: 20px;
-  font-size: 20px;
+  gap: 10px;
+  font-size: 25px;
 }
 
 .footer_text {
@@ -162,7 +162,7 @@ body {
       'navbar main'
       'footer main';
     grid-template-columns: 2fr 8fr;
-    grid-template-rows: 11fr 2fr;
+    grid-template-rows: 10fr 2fr;
   }
 
   .aside {

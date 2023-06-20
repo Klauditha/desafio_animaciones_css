@@ -122,10 +122,10 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  height: 250px;
+  height: 300px;
   overflow-y: auto;
   border-radius: 20px;
- 
+  border:0;
 }
 
 .item_image img {
