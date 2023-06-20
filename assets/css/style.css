@@ -160,10 +160,9 @@ body {
     display: grid;
     grid-template-areas:
       'navbar main'
-      'navbar main'
-      'footer footer';
+      'footer main';
     grid-template-columns: 2fr 8fr;
-    grid-template-rows: 0.5fr 8.5fr 1fr;
+    grid-template-rows: 11fr 2fr;
   }
 
   .aside {
