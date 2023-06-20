@@ -315,4 +315,24 @@ body {
     text-shadow: 2px 5px 9px #f9f9f9, 5px 5px 10px #d54848;
   }
 }
-  
+@media (min-width: 1367px) {
+  .container {
+    display: grid;
+    grid-template-areas:
+      'navbar main'
+      'footer main';
+    grid-template-columns: 2fr 8fr;
+    grid-template-rows: 14fr 2fr;
+  }
+
+  .item {
+    width: 350px;
+    height: 300px;
+    margin-left: 20px;
+    border: 4px groove var(--DarkPrimaryColor);
+  }
+
+  .item_image img {
+    width: 280px;
+  }
+}
